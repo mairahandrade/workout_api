@@ -15,6 +15,8 @@ class Atleta(BaseSchema):
     sexo: Annotated[str, Field(description='Sexo do atleta', example='M', max_length=1)]
     categoria: Annotated[CategoriaIn, Field(description='Categoria do atleta')]
     centro_treinamento: Annotated[CentroTreinamentoAtleta, Field(description='Centro de treinamento do atleta')]
+    nun_vi: Annotated[int, Field(description="Numero de Vitórias",example=2)]
+    nun_de: Annotated[int, Field(description="Numero de Derrottas",example=5)]
 
 
 class AtletaIn(Atleta):
